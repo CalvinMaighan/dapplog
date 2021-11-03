@@ -12,7 +12,5 @@ export const useSize = (ref) => {
     setSize(ref.current.getBoundingClientRect());
   }, [isEqual(prev_ref, ref), width, height]);
 
-  return {
-    size,
-  };
+  return size;
 };

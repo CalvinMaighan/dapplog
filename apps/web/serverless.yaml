@@ -1,8 +1,8 @@
 component: website
-name: ladder-caster
+name: dapplog
 stage: dev
 
 inputs:
   src: ./build
-  domain: laddercaster.com
+  domain: https://dapplog.basketswap.io
   region: us-east-1
