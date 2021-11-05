@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { media } from 'design';
+import { bgTexture } from 'design/textures';
+import { TextureFur } from 'design/textures/fur.texture';
 
 export const _home = styled.div`
   width: 100%;
@@ -133,13 +135,36 @@ export const _third = styled.div`
       `}
 `;
 
-export const _projects = styled.div``;
+export const _projects = styled.div`
+  position: relative;
+  z-index: 5;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000;
+  background-image: ${({ theme }) => bgTexture(TextureFur('#05060a', 0.04))};
+  background-size: 24px;
+  background-repeat: repeat;
+  bottom: 80px;
+`;
 
-export const _laddercaster = styled.div``;
+export const _shadow = styled.div`
+  width: 100%;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+`;
 
-export const _basketswap = styled.div``;
-
-export const _theone = styled.div``;
+export const _gradient = styled.div`
+  min-width: 100%;
+  width: 100%;
+  min-height: 80px;
+  height: 80px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+`;
 
 export const _title = styled.div`
   font-size: 20px;
@@ -278,4 +303,24 @@ export const _side = styled.div`
         border-radius: ${({ $left }) =>
           $left ? '12px 0 0 12px' : '0 12px 12px 0'};
       `}
+`;
+
+export const _scroll = styled.div`
+  position: relative;
+  z-index: 40;
+  width: 100%;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  > svg {
+    min-width: 36px;
+    width: 36px;
+    min-height: 36px;
+    height: 36px;
+    color: white;
+    position: relative;
+    bottom: 16px;
+  }
 `;

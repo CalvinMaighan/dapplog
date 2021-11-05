@@ -9,10 +9,6 @@ import {
   _projects,
   _item,
   _container,
-  _laddercaster,
-  _basketswap,
-  _theone,
-  _avala,
   _right,
   _left,
   _bottom,
@@ -21,8 +17,14 @@ import {
   _hook,
   _text,
   _subtext,
+  _scroll,
+  _shadow,
+  _gradient,
 } from './Home.styled';
 import { useSize } from 'core/hooks/useSize';
+import { IconChevronDown } from 'design/icons/chevron-down.icon';
+import Slider from './slider/Slider';
+import Project from './project/Project';
 
 const Home = () => {
   const phase_ref = useRef();
@@ -76,11 +78,15 @@ const Home = () => {
           </_third>
         </_phases>
       </_hero>
+      <_scroll>
+        <IconChevronDown />
+      </_scroll>
       <_projects>
-        <_laddercaster></_laddercaster>
-        <_basketswap></_basketswap>
-        <_theone></_theone>
-        <_avala></_avala>
+        <_shadow>
+          <_gradient />
+        </_shadow>
+        <Slider />
+        <Project />
       </_projects>
     </_home>
   );
