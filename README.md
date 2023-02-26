@@ -7,3 +7,4 @@ Stake Drops
 Basket Swap
 Double Confirm
 The One
+Seen Cam
